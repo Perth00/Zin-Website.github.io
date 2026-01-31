@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional Taekwondo Coaching - Learn from a former national team athlete and SEA Games gold medalist">
+  <meta name="theme-color" content="#1a1a1a">
+  <title>TripleZin | Taekwondo Poomsae Coach</title>
+  
+  <!-- Preload critical assets -->
+  <link rel="preload" href="styles.css" as="style">
+  <link rel="preload" href="assets/logo.svg" as="image">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+  <!-- ===================== INTRO ANIMATION ===================== -->
+  <div id="intro" class="intro" aria-label="Loading animation">
+    <button class="intro__skip" id="skipIntro" aria-label="Skip intro animation">
+      Skip
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M5 4l10 8-10 8V4z"/><line x1="19" y1="5" x2="19" y2="19"/>
+      </svg>
+    </button>
+    
+    <div class="intro__content">
+      <div class="intro__logo">
+        <img src="assets/logo.svg" alt="TripleZin Logo" width="80" height="80">
+      </div>
+      <div class="intro__animation">
+        <img src="assets/intro-kick.svg" alt="" aria-hidden="true" class="intro__kick" id="introKick">
+      </div>
+      <p class="intro__text">TripleZin</p>
+    </div>
+  </div>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <div id="mainContent" class="main-content" aria-hidden="true">
+    
+    <!-- Navigation -->
+    <header class="header" id="header">
+      <nav class="nav container" aria-label="Main navigation">
+        <a href="#home" class="nav__logo">
+          <img src="assets/logo.svg" alt="TripleZin" width="48" height="48">
+          <span class="nav__logo-text">TripleZin</span>
+        </a>
+        
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="nav__toggle-line"></span>
+          <span class="nav__toggle-line"></span>
+          <span class="nav__toggle-line"></span>
+        </button>
+        
+        <ul class="nav__menu" id="navMenu" role="menubar">
+          <li role="none"><a href="#home" class="nav__link" role="menuitem">Home</a></li>
+          <li role="none"><a href="#about" class="nav__link" role="menuitem">About</a></li>
+          <li role="none"><a href="#gallery" class="nav__link" role="menuitem">Gallery</a></li>
+          <li role="none"><a href="#coaching" class="nav__link" role="menuitem">Coaching</a></li>
+          <li role="none"><a href="#faq" class="nav__link" role="menuitem">FAQ</a></li>
+          <li role="none"><a href="#contact" class="nav__link nav__link--cta" role="menuitem">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ===================== A) HERO SECTION ===================== -->
+      <section id="home" class="hero">
+        <div class="hero__bg" aria-hidden="true">
+          <div class="hero__gradient"></div>
+          <div class="hero__shapes">
+            <div class="hero__shape hero__shape--1"></div>
+            <div class="hero__shape hero__shape--2"></div>
+            <div class="hero__shape hero__shape--3"></div>
+          </div>
+        </div>
+        
+        <div class="hero__content container">
+          <div class="hero__badge animate-on-scroll">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <span id="heroBadge">2025 SEA Games Gold Medalist</span>
+          </div>
+          
+          <h1 class="hero__title animate-on-scroll">
+            <span class="hero__name" id="heroName">TripleZin</span>
+            <span class="hero__tagline" id="heroTagline">Taekwondo Poomsae Coach • Former National Team Athlete</span>
+          </h1>
+          
+          <p class="hero__description animate-on-scroll">
+            Master the art of Poomsae with personalized coaching from a world-ranked competitor. 
+            Build technique, discipline, and confidence.
+          </p>
+          
+          <div class="hero__cta animate-on-scroll">
+            <a href="#contact" class="btn btn--primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+              </svg>
+              Book a Trial Class
+            </a>
+            <a href="#about" class="btn btn--secondary">
+              Learn More
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17l9.2-9.2M17 17V7H7"/>
+              </svg>
+            </a>
+          </div>
+          
+          <div class="hero__stats animate-on-scroll">
+            <div class="hero__stat">
+              <span class="hero__stat-number">16</span>
+              <span class="hero__stat-label">Years in Taekwondo</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-number">Top 20+</span>
+              <span class="hero__stat-label">World Ranking</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-number">8+</span>
+              <span class="hero__stat-label">Gold Medals</span>
+            </div>
+          </div>
+        </div>
+        
+        <a href="#about" class="hero__scroll" aria-label="Scroll to about section">
+          <span>Scroll</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M5 12l7 7 7-7"/>
+          </svg>
+        </a>
+      </section>
+
+      <!-- ===================== B) ABOUT SECTION ===================== -->
+      <section id="about" class="about section">
+        <div class="container">
+          <header class="section__header animate-on-scroll">
+            <span class="section__label">About Me</span>
+            <h2 class="section__title">Passion Meets Excellence</h2>
+          </header>
+          
+          <div class="about__grid">
+            <div class="about__image animate-on-scroll">
+              <div class="about__photo">
+                <!-- Photo placeholder - replace with actual photo -->
+                <div class="about__photo-placeholder">
+                  <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
+                  </svg>
+                  <span>Coach Photo</span>
+                </div>
+              </div>
+              <div class="about__accent"></div>
+            </div>
+            
+            <div class="about__content">
+              <p class="about__bio animate-on-scroll">
+                Hi, I'm <strong>Zin</strong>, a dedicated Taekwondo Poomsae coach and former Malaysian national team athlete. 
+                I started my Taekwondo journey at <strong>age 4</strong>, and after <strong>16 years</strong> of training and competing, 
+                I've reached the World Top 20+ ranking, competed in World Championships, and brought home gold from the SEA Games. 
+                Now at 20, I've retired from competition to focus on coaching the next generation.
+              </p>
+              <p class="about__bio animate-on-scroll">
+                My coaching philosophy centers on building <strong>strong fundamentals</strong>, 
+                developing <strong>precise technique</strong>, and cultivating the <strong>mental discipline</strong> 
+                that separates good practitioners from great ones.
+              </p>
+              
+              <ul class="about__highlights animate-on-scroll">
+                <li>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  Personalized training programs for all skill levels
+                </li>
+                <li>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  Competition preparation and mental coaching
+                </li>
+                <li>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  Video analysis and technique refinement
+                </li>
+                <li>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  Flexible scheduling for students and professionals
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Achievements Grid -->
+          <div class="achievements animate-on-scroll">
+            <h3 class="achievements__title">Achievements</h3>
+            <div class="achievements__grid">
+              <div class="achievement">
+                <div class="achievement__icon achievement__icon--gold">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                </div>
+                <span class="achievement__text">2024 World Poomsae Championship - 5th Place</span>
+              </div>
+              <div class="achievement">
+                <div class="achievement__icon achievement__icon--gold">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                </div>
+                <span class="achievement__text">2025 SEA Games - Team Gold Medalist</span>
+              </div>
+              <div class="achievement">
+                <div class="achievement__icon achievement__icon--gold">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                </div>
+                <span class="achievement__text">2025 Korea Open - Gold Medalist</span>
+              </div>
+              <div class="achievement">
+                <div class="achievement__icon achievement__icon--gold">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                </div>
+                <span class="achievement__text">2025 Croatia Poomsae Open (G1)</span>
+              </div>
+              <div class="achievement">
+                <div class="achievement__icon achievement__icon--gold">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                </div>
+                <span class="achievement__text">2024 SUKMA - 2x Gold (Individual & Pair)</span>
+              </div>
+              <div class="achievement">
+                <div class="achievement__icon achievement__icon--blue">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <circle cx="12" cy="12" r="10"/>
+                  </svg>
+                </div>
+                <span class="achievement__text">Highest World Ranking - Top 20</span>
+              </div>
+              <div class="achievement">
+                <div class="achievement__icon achievement__icon--gold">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                </div>
+                <span class="achievement__text">2024 ASEAN University Games - Gold</span>
+              </div>
+              <div class="achievement">
+                <div class="achievement__icon achievement__icon--gold">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                </div>
+                <span class="achievement__text">Multiple National Gold Medals</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Journey Timeline -->
+          <div class="journey animate-on-scroll">
+            <h3 class="journey__title">My Journey</h3>
+            <div class="journey__timeline">
+              <div class="journey__item">
+                <div class="journey__year">2010</div>
+                <div class="journey__content">
+                  <h4>The Beginning</h4>
+                  <p>Started Taekwondo training at age 4. Fell in love with the discipline and art of martial arts.</p>
+                </div>
+              </div>
+              <div class="journey__item">
+                <div class="journey__year">2013</div>
+                <div class="journey__content">
+                  <h4>First Competition</h4>
+                  <p>Entered first national competition at age 11 and discovered passion for Poomsae.</p>
+                </div>
+              </div>
+              <div class="journey__item">
+                <div class="journey__year">2023</div>
+                <div class="journey__content">
+                  <h4>National Team</h4>
+                  <p>Selected for the Malaysian National Poomsae Team at age 17. Started competing internationally.</p>
+                </div>
+              </div>
+              <div class="journey__item">
+                <div class="journey__year">2024</div>
+                <div class="journey__content">
+                  <h4>World Stage</h4>
+                  <p>Competed at World Poomsae Championship in Hong Kong. Achieved 5th place and Top 20+ world ranking.</p>
+                </div>
+              </div>
+              <div class="journey__item">
+                <div class="journey__year">2025</div>
+                <div class="journey__content">
+                  <h4>SEA Games Glory</h4>
+                  <p>Won team gold at SEA Games. Multiple international golds including Korea Open and Croatia Open.</p>
+                </div>
+              </div>
+              <div class="journey__item journey__item--current">
+                <div class="journey__year">2026</div>
+                <div class="journey__content">
+                  <h4>New Chapter</h4>
+                  <p>Retired from competition at 20 to focus on coaching. Now sharing 16 years of experience with the next generation.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== PHOTO GALLERY SECTION ===================== -->
+      <section id="gallery" class="gallery section section--dark">
+        <div class="container">
+          <header class="section__header animate-on-scroll">
+            <span class="section__label">Memories</span>
+            <h2 class="section__title">Photo Gallery</h2>
+            <p class="section__subtitle">Moments from competitions, training, and achievements</p>
+          </header>
+          
+          <div class="gallery__grid">
+            <!-- Gallery Item 1 -->
+            <div class="gallery__item gallery__item--large animate-on-scroll">
+              <div class="gallery__image">
+                <div class="gallery__placeholder">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <polyline points="21 15 16 10 5 21"/>
+                  </svg>
+                  <span>Competition Photo</span>
+                </div>
+              </div>
+              <div class="gallery__overlay">
+                <span class="gallery__caption">2024 World Championship - Hong Kong</span>
+              </div>
+            </div>
+            
+            <!-- Gallery Item 2 -->
+            <div class="gallery__item animate-on-scroll">
+              <div class="gallery__image">
+                <div class="gallery__placeholder">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <polyline points="21 15 16 10 5 21"/>
+                  </svg>
+                  <span>Medal Photo</span>
+                </div>
+              </div>
+              <div class="gallery__overlay">
+                <span class="gallery__caption">SEA Games 2025 Gold Medal</span>
+              </div>
+            </div>
+            
+            <!-- Gallery Item 3 -->
+            <div class="gallery__item animate-on-scroll">
+              <div class="gallery__image">
+                <div class="gallery__placeholder">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <polyline points="21 15 16 10 5 21"/>
+                  </svg>
+                  <span>Training Photo</span>
+                </div>
+              </div>
+              <div class="gallery__overlay">
+                <span class="gallery__caption">Training Session</span>
+              </div>
+            </div>
+            
+            <!-- Gallery Item 4 -->
+            <div class="gallery__item animate-on-scroll">
+              <div class="gallery__image">
+                <div class="gallery__placeholder">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <polyline points="21 15 16 10 5 21"/>
+                  </svg>
+                  <span>Award Photo</span>
+                </div>
+              </div>
+              <div class="gallery__overlay">
+                <span class="gallery__caption">Korea Open 2025 Victory</span>
+              </div>
+            </div>
+            
+            <!-- Gallery Item 5 -->
+            <div class="gallery__item gallery__item--tall animate-on-scroll">
+              <div class="gallery__image">
+                <div class="gallery__placeholder">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <polyline points="21 15 16 10 5 21"/>
+                  </svg>
+                  <span>Action Shot</span>
+                </div>
+              </div>
+              <div class="gallery__overlay">
+                <span class="gallery__caption">High Kick Performance</span>
+              </div>
+            </div>
+            
+            <!-- Gallery Item 6 -->
+            <div class="gallery__item animate-on-scroll">
+              <div class="gallery__image">
+                <div class="gallery__placeholder">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <polyline points="21 15 16 10 5 21"/>
+                  </svg>
+                  <span>Team Photo</span>
+                </div>
+              </div>
+              <div class="gallery__overlay">
+                <span class="gallery__caption">National Team</span>
+              </div>
+            </div>
+            
+            <!-- Gallery Item 7 -->
+            <div class="gallery__item animate-on-scroll">
+              <div class="gallery__image">
+                <div class="gallery__placeholder">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <polyline points="21 15 16 10 5 21"/>
+                  </svg>
+                  <span>Ceremony Photo</span>
+                </div>
+              </div>
+              <div class="gallery__overlay">
+                <span class="gallery__caption">Award Ceremony</span>
+              </div>
+            </div>
+            
+            <!-- Gallery Item 8 -->
+            <div class="gallery__item animate-on-scroll">
+              <div class="gallery__image">
+                <div class="gallery__placeholder">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <polyline points="21 15 16 10 5 21"/>
+                  </svg>
+                  <span>Student Photo</span>
+                </div>
+              </div>
+              <div class="gallery__overlay">
+                <span class="gallery__caption">Coaching Students</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="gallery__cta animate-on-scroll">
+            <a href="#" class="btn btn--outline" id="instagramGalleryBtn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+              </svg>
+              See More on Instagram
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== C) VIDEOS SECTION ===================== -->
+      <section id="videos" class="videos section section--dark">
+        <div class="container">
+          <header class="section__header animate-on-scroll">
+            <span class="section__label">Training Content</span>
+            <h2 class="section__title">Signature Techniques</h2>
+            <p class="section__subtitle">Learn what you'll master in our training sessions</p>
+          </header>
+          
+          <!-- Filter Bar -->
+          <div class="videos__filter animate-on-scroll" role="tablist" aria-label="Filter videos">
+            <button class="videos__filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+            <button class="videos__filter-btn" data-filter="training" role="tab" aria-selected="false">Training</button>
+            <button class="videos__filter-btn" data-filter="competition" role="tab" aria-selected="false">Competition</button>
+            <button class="videos__filter-btn" data-filter="tutorials" role="tab" aria-selected="false">Tutorials</button>
+          </div>
+          
+          <!-- Video Grid -->
+          <div class="videos__grid" id="videosGrid">
+            <!-- Videos populated by JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== D) COACHING SECTION ===================== -->
+      <section id="coaching" class="coaching section">
+        <div class="container">
+          <header class="section__header animate-on-scroll">
+            <span class="section__label">Programs</span>
+            <h2 class="section__title">Coaching Programs</h2>
+            <p class="section__subtitle">Choose the right program for your journey</p>
+          </header>
+          
+          <!-- What You Will Learn -->
+          <h3 class="skills__title animate-on-scroll">What You Will Learn</h3>
+          <div class="skills animate-on-scroll">
+            <div class="skills__item">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+              </svg>
+              <span>Improve Hand Speed</span>
+            </div>
+            <div class="skills__item">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+              <span>Execute Clean Poomsae</span>
+            </div>
+            <div class="skills__item">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+              </svg>
+              <span>Increase Kick Speed</span>
+            </div>
+            <div class="skills__item">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20M2 12h20"/>
+                <circle cx="12" cy="5" r="2"/>
+              </svg>
+              <span>High Kick Fundamentals</span>
+            </div>
+            <div class="skills__item">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+              </svg>
+              <span>Poomsae Rhythm</span>
+            </div>
+            <div class="skills__item">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/><path d="M12 8v4l2 2"/>
+                <path d="M8 14h8"/>
+              </svg>
+              <span>Waist Control</span>
+            </div>
+            <div class="skills__item">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+              <span>Balance Transfer</span>
+            </div>
+          </div>
+          
+          <!-- Pricing Cards -->
+          <div class="pricing__grid">
+            <!-- Beginner -->
+            <div class="pricing__card animate-on-scroll">
+              <div class="pricing__header">
+                <span class="pricing__level">Beginner</span>
+                <div class="pricing__price">
+                  <span class="pricing__currency">RM</span>
+                  <span class="pricing__amount">80</span>
+                  <span class="pricing__period">/session</span>
+                </div>
+              </div>
+              <ul class="pricing__features">
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  Basic stances & footwork
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  Fundamental Poomsae forms
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  Core strength building
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  Flexibility training
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  1-hour sessions
+                </li>
+              </ul>
+              <a href="#" class="btn btn--outline pricing__cta" data-whatsapp="beginner">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                WhatsApp Me
+              </a>
+            </div>
+            
+            <!-- Intermediate - Featured -->
+            <div class="pricing__card pricing__card--featured animate-on-scroll">
+              <div class="pricing__badge">Most Popular</div>
+              <div class="pricing__header">
+                <span class="pricing__level">Intermediate</span>
+                <div class="pricing__price">
+                  <span class="pricing__currency">RM</span>
+                  <span class="pricing__amount">100</span>
+                  <span class="pricing__period">/session</span>
+                </div>
+              </div>
+              <ul class="pricing__features">
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  Advanced Poomsae forms
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  High kick fundamentals
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  Rhythm & timing drills
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  Video technique analysis
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  Waist control training
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  1.5-hour sessions
+                </li>
+              </ul>
+              <a href="#" class="btn btn--primary pricing__cta" data-whatsapp="intermediate">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                WhatsApp Me
+              </a>
+            </div>
+            
+            <!-- Competition Prep -->
+            <div class="pricing__card animate-on-scroll">
+              <div class="pricing__header">
+                <span class="pricing__level">Competition Prep</span>
+                <div class="pricing__price">
+                  <span class="pricing__currency">RM</span>
+                  <span class="pricing__amount">150</span>
+                  <span class="pricing__period">/session</span>
+                </div>
+              </div>
+              <ul class="pricing__features">
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  Competition-level forms
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  Mental preparation coaching
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  Mock competition practice
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  Detailed performance review
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  Strategy & scoring insights
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  2-hour intensive sessions
+                </li>
+              </ul>
+              <a href="#" class="btn btn--outline pricing__cta" data-whatsapp="competition">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                WhatsApp Me
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== E) SCHEDULE SECTION ===================== -->
+      <section id="schedule" class="schedule section section--dark">
+        <div class="container">
+          <header class="section__header animate-on-scroll">
+            <span class="section__label">Availability</span>
+            <h2 class="section__title">Schedule & Location</h2>
+          </header>
+          
+          <div class="schedule__grid">
+            <div class="schedule__table-wrapper animate-on-scroll">
+              <table class="schedule__table">
+                <thead>
+                  <tr>
+                    <th>Day</th>
+                    <th>Morning</th>
+                    <th>Afternoon</th>
+                    <th>Evening</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="Day">Monday</td>
+                    <td data-label="Morning">—</td>
+                    <td data-label="Afternoon">2:00 - 5:00 PM</td>
+                    <td data-label="Evening">7:00 - 9:00 PM</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Day">Tuesday</td>
+                    <td data-label="Morning">9:00 - 11:00 AM</td>
+                    <td data-label="Afternoon">—</td>
+                    <td data-label="Evening">7:00 - 9:00 PM</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Day">Wednesday</td>
+                    <td data-label="Morning">—</td>
+                    <td data-label="Afternoon">2:00 - 5:00 PM</td>
+                    <td data-label="Evening">7:00 - 9:00 PM</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Day">Thursday</td>
+                    <td data-label="Morning">9:00 - 11:00 AM</td>
+                    <td data-label="Afternoon">—</td>
+                    <td data-label="Evening">7:00 - 9:00 PM</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Day">Friday</td>
+                    <td data-label="Morning">—</td>
+                    <td data-label="Afternoon">2:00 - 5:00 PM</td>
+                    <td data-label="Evening">—</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Day">Saturday</td>
+                    <td data-label="Morning">9:00 AM - 12:00 PM</td>
+                    <td data-label="Afternoon">2:00 - 5:00 PM</td>
+                    <td data-label="Evening">—</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Day">Sunday</td>
+                    <td data-label="Morning">9:00 AM - 12:00 PM</td>
+                    <td data-label="Afternoon">—</td>
+                    <td data-label="Evening">—</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p class="schedule__note">* Schedule subject to change. Contact me to confirm availability.</p>
+            </div>
+            
+            <div class="schedule__location animate-on-scroll">
+              <h3 class="schedule__location-title">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                Training Location
+              </h3>
+              <p class="schedule__address">
+                <!-- REPLACE: Add your actual training location -->
+                Kuala Lumpur, Malaysia<br>
+                <span class="schedule__address-detail">Exact location provided upon booking</span>
+              </p>
+              
+              <!-- Map placeholder -->
+              <div class="schedule__map">
+                <div class="schedule__map-placeholder">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  <span>Map Location</span>
+                  <small>Contact for directions</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== F) TESTIMONIALS SECTION ===================== -->
+      <section id="testimonials" class="testimonials section">
+        <div class="container">
+          <header class="section__header animate-on-scroll">
+            <span class="section__label">Reviews</span>
+            <h2 class="section__title">What Students Say</h2>
+          </header>
+          
+          <div class="testimonials__carousel" id="testimonialsCarousel">
+            <div class="testimonials__track">
+              <!-- Testimonial 1 -->
+              <div class="testimonial animate-on-scroll">
+                <div class="testimonial__rating">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <blockquote class="testimonial__text">
+                  "Coach Zin's attention to detail transformed my Poomsae. She catches every small mistake and explains corrections clearly. My forms improved dramatically in just a few months."
+                </blockquote>
+                <div class="testimonial__author">
+                  <div class="testimonial__avatar">AH</div>
+                  <div class="testimonial__info">
+                    <span class="testimonial__name">Ahmad H.</span>
+                    <span class="testimonial__role">Intermediate Student</span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Testimonial 2 -->
+              <div class="testimonial animate-on-scroll">
+                <div class="testimonial__rating">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <blockquote class="testimonial__text">
+                  "Preparing for competition was stressful, but Coach Zin's guidance made all the difference. Her experience as a national athlete gives her insights you can't get anywhere else."
+                </blockquote>
+                <div class="testimonial__author">
+                  <div class="testimonial__avatar">SL</div>
+                  <div class="testimonial__info">
+                    <span class="testimonial__name">Sarah L.</span>
+                    <span class="testimonial__role">Competition Prep</span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Testimonial 3 -->
+              <div class="testimonial animate-on-scroll">
+                <div class="testimonial__rating">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <blockquote class="testimonial__text">
+                  "As a complete beginner, I was nervous to start. Coach Zin was patient and encouraging. Now I'm confidently performing forms I never thought I could do!"
+                </blockquote>
+                <div class="testimonial__author">
+                  <div class="testimonial__avatar">WC</div>
+                  <div class="testimonial__info">
+                    <span class="testimonial__name">Wei C.</span>
+                    <span class="testimonial__role">Beginner Student</span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Testimonial 4 -->
+              <div class="testimonial animate-on-scroll">
+                <div class="testimonial__rating">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <blockquote class="testimonial__text">
+                  "The video analysis sessions are invaluable. Coach Zin breaks down every movement and shows exactly what to improve. Worth every ringgit!"
+                </blockquote>
+                <div class="testimonial__author">
+                  <div class="testimonial__avatar">JT</div>
+                  <div class="testimonial__info">
+                    <span class="testimonial__name">Jason T.</span>
+                    <span class="testimonial__role">Intermediate Student</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== FAQ SECTION ===================== -->
+      <section id="faq" class="faq section">
+        <div class="container">
+          <header class="section__header animate-on-scroll">
+            <span class="section__label">Questions</span>
+            <h2 class="section__title">Frequently Asked Questions</h2>
+          </header>
+          
+          <div class="faq__grid">
+            <div class="faq__item animate-on-scroll">
+              <button class="faq__question" aria-expanded="false">
+                <span>What age group do you teach?</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </button>
+              <div class="faq__answer">
+                <p>I teach students of all ages, from children (7+) to adults. Each session is tailored to the individual's skill level, physical ability, and goals. Whether you're a young beginner or an adult looking to compete, I can design a program for you.</p>
+              </div>
+            </div>
+            
+            <div class="faq__item animate-on-scroll">
+              <button class="faq__question" aria-expanded="false">
+                <span>Do I need prior Taekwondo experience?</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </button>
+              <div class="faq__answer">
+                <p>Not at all! I welcome complete beginners. My Beginner program focuses on building strong fundamentals from scratch. If you already have experience, we'll assess your current level and work on advancing your skills.</p>
+              </div>
+            </div>
+            
+            <div class="faq__item animate-on-scroll">
+              <button class="faq__question" aria-expanded="false">
+                <span>What is Poomsae exactly?</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </button>
+              <div class="faq__answer">
+                <p>Poomsae (also spelled Poomse) is the "forms" or "patterns" aspect of Taekwondo. It involves performing a sequence of defensive and offensive movements against imaginary opponents. It emphasizes precision, balance, breathing, and technique—like martial arts choreography judged on form and execution.</p>
+              </div>
+            </div>
+            
+            <div class="faq__item animate-on-scroll">
+              <button class="faq__question" aria-expanded="false">
+                <span>How long is each training session?</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </button>
+              <div class="faq__answer">
+                <p>Beginner sessions are 1 hour, Intermediate sessions are 1.5 hours, and Competition Prep sessions are 2 hours. This ensures enough time for warm-up, technique practice, drills, and cool-down appropriate for each level.</p>
+              </div>
+            </div>
+            
+            <div class="faq__item animate-on-scroll">
+              <button class="faq__question" aria-expanded="false">
+                <span>What should I wear/bring to training?</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </button>
+              <div class="faq__answer">
+                <p>For your first few sessions, comfortable athletic wear (t-shirt and shorts/leggings) is fine. Bring water and a towel. If you decide to continue, I recommend getting a dobok (Taekwondo uniform). Training is done barefoot.</p>
+              </div>
+            </div>
+            
+            <div class="faq__item animate-on-scroll">
+              <button class="faq__question" aria-expanded="false">
+                <span>Do you offer group classes or only private?</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </button>
+              <div class="faq__answer">
+                <p>I primarily offer private 1-on-1 coaching for personalized attention. However, I also do small group sessions (2-4 people) at a discounted rate—great for friends or family who want to train together. Contact me for group pricing!</p>
+              </div>
+            </div>
+            
+            <div class="faq__item animate-on-scroll">
+              <button class="faq__question" aria-expanded="false">
+                <span>Can you help me prepare for competitions?</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </button>
+              <div class="faq__answer">
+                <p>Absolutely! Competition prep is my specialty. As a former national team athlete with international competition experience including World Championships and SEA Games, I understand exactly what judges look for and how to maximize your scores. We'll work on everything from form perfection to mental preparation.</p>
+              </div>
+            </div>
+            
+            <div class="faq__item animate-on-scroll">
+              <button class="faq__question" aria-expanded="false">
+                <span>What's your cancellation policy?</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </button>
+              <div class="faq__answer">
+                <p>Please provide at least 24 hours notice for cancellations or rescheduling. Last-minute cancellations (less than 24 hours) may be charged at 50% of the session fee. I understand emergencies happen—just communicate with me!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== G) CONTACT SECTION ===================== -->
+      <section id="contact" class="contact section section--dark">
+        <div class="container">
+          <header class="section__header animate-on-scroll">
+            <span class="section__label">Get In Touch</span>
+            <h2 class="section__title">Ready to Start?</h2>
+            <p class="section__subtitle">Book your first session or ask me anything</p>
+          </header>
+          
+          <div class="contact__grid">
+            <!-- Quick Contact Buttons -->
+            <div class="contact__quick animate-on-scroll">
+              <h3 class="contact__quick-title">Quick Contact</h3>
+              
+              <div class="contact__buttons">
+                <a href="#" class="contact__btn contact__btn--whatsapp" id="whatsappBtn">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                  </svg>
+                  <span>WhatsApp</span>
+                </a>
+                
+                <button class="contact__btn contact__btn--wechat" id="wechatBtn" aria-haspopup="dialog">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 01.213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 00.167-.054l1.903-1.114a.864.864 0 01.717-.098 10.16 10.16 0 002.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 01-1.162 1.178A1.17 1.17 0 014.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 01-1.162 1.178 1.17 1.17 0 01-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 01.598.082l1.584.926a.272.272 0 00.14.045c.133 0 .241-.108.241-.241 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 01-.023-.156.49.49 0 01.201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.004-.272-.011-.405-.032h.001zm-2.503 3.274c.535 0 .969.44.969.982a.976.976 0 01-.969.983.976.976 0 01-.969-.983c0-.542.434-.982.97-.982zm4.84 0c.536 0 .969.44.969.982a.976.976 0 01-.969.983.976.976 0 01-.969-.983c0-.542.434-.982.969-.982z"/>
+                  </svg>
+                  <span>WeChat</span>
+                </button>
+                
+                <a href="#" class="contact__btn contact__btn--facebook" id="facebookBtn">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                  <span>Facebook</span>
+                </a>
+                
+                <a href="#" class="contact__btn contact__btn--email" id="emailBtn">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                  <span>Email</span>
+                </a>
+                
+                <a href="#" class="contact__btn contact__btn--instagram" id="instagramBtn">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                  </svg>
+                  <span>Instagram</span>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="contact__form-wrapper animate-on-scroll">
+              <h3 class="contact__form-title">Send a Message</h3>
+              
+              <!-- REPLACE: Update form action with your Formspree endpoint -->
+              <form class="contact__form" id="contactForm" action="https://formspree.io/f/xxxxxxx" method="POST">
+                <div class="form__group">
+                  <label for="name" class="form__label">Name *</label>
+                  <input type="text" id="name" name="name" class="form__input" required autocomplete="name">
+                </div>
+                
+                <div class="form__group">
+                  <label for="email" class="form__label">Email *</label>
+                  <input type="email" id="email" name="email" class="form__input" required autocomplete="email">
+                </div>
+                
+                <div class="form__group">
+                  <label for="phone" class="form__label">Phone (optional)</label>
+                  <input type="tel" id="phone" name="phone" class="form__input" autocomplete="tel">
+                </div>
+                
+                <div class="form__group form__group--full">
+                  <label for="message" class="form__label">Message *</label>
+                  <textarea id="message" name="message" class="form__textarea" rows="4" required></textarea>
+                </div>
+                
+                <div class="form__group form__group--full">
+                  <label class="form__checkbox">
+                    <input type="checkbox" name="consent" required>
+                    <span class="form__checkbox-mark"></span>
+                    <span class="form__checkbox-text">I agree to be contacted regarding my inquiry *</span>
+                  </label>
+                </div>
+                
+                <button type="submit" class="btn btn--primary form__submit">
+                  <span>Send Message</span>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="22" y1="2" x2="11" y2="13"/>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__brand">
+            <a href="#home" class="footer__logo">
+              <img src="assets/logo.svg" alt="TripleZin" width="40" height="40">
+              <span>TripleZin</span>
+            </a>
+            <p class="footer__tagline">Professional Taekwondo Poomsae Coaching</p>
+          </div>
+          
+          <div class="footer__links">
+            <a href="#about">About</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#coaching">Coaching</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+          </div>
+          
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" id="footerWhatsapp" aria-label="WhatsApp">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+            </a>
+            <a href="#" class="footer__social-link" id="footerFacebook" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+            <a href="#" class="footer__social-link" id="footerInstagram" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer__bottom">
+          <p>&copy; <span id="currentYear">2026</span> TripleZin. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- WeChat QR Modal -->
+  <div class="modal" id="wechatModal" role="dialog" aria-modal="true" aria-labelledby="wechatModalTitle" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__content">
+      <button class="modal__close" aria-label="Close modal" data-close-modal>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <h3 id="wechatModalTitle" class="modal__title">Scan to Add on WeChat</h3>
+      <div class="modal__qr">
+        <!-- REPLACE: Use your actual WeChat QR code image -->
+        <img src="assets/wechat-qr.svg" alt="WeChat QR Code" width="200" height="200">
+      </div>
+      <p class="modal__text">Scan this QR code with your WeChat app to add me</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

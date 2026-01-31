@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="skinTone" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffe0d0"/>
+      <stop offset="100%" style="stop-color:#ffd0c0"/>
+    </linearGradient>
+    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5a3825"/>
+      <stop offset="100%" style="stop-color:#3d2517"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Circle background -->
+  <circle cx="60" cy="60" r="56" fill="#fff5f5" stroke="#e63946" stroke-width="3"/>
+  
+  <!-- Hair back -->
+  <ellipse cx="60" cy="42" rx="28" ry="26" fill="url(#hairGrad)"/>
+  
+  <!-- Face -->
+  <ellipse cx="60" cy="48" rx="22" ry="20" fill="url(#skinTone)"/>
+  
+  <!-- Hair front/bangs -->
+  <path d="M38 38 Q45 28 60 30 Q75 28 82 38 Q80 42 75 40 Q65 35 60 38 Q55 35 45 40 Q40 42 38 38" fill="url(#hairGrad)"/>
+  
+  <!-- Hair sides -->
+  <ellipse cx="38" cy="50" rx="8" ry="14" fill="url(#hairGrad)"/>
+  <ellipse cx="82" cy="50" rx="8" ry="14" fill="url(#hairGrad)"/>
+  
+  <!-- Eyes -->
+  <ellipse cx="50" cy="48" rx="5" ry="6" fill="#2d2d2d"/>
+  <ellipse cx="70" cy="48" rx="5" ry="6" fill="#2d2d2d"/>
+  <!-- Eye shine -->
+  <circle cx="52" cy="46" r="2" fill="#fff"/>
+  <circle cx="72" cy="46" r="2" fill="#fff"/>
+  
+  <!-- Eyebrows (determined look) -->
+  <path d="M44 40 Q50 38 56 41" stroke="#3d2517" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M76 40 Q70 38 64 41" stroke="#3d2517" stroke-width="2" fill="none" stroke-linecap="round"/>
+  
+  <!-- Blush -->
+  <ellipse cx="42" cy="54" rx="5" ry="3" fill="#ffb6c1" opacity="0.6"/>
+  <ellipse cx="78" cy="54" rx="5" ry="3" fill="#ffb6c1" opacity="0.6"/>
+  
+  <!-- Mouth (small determined) -->
+  <path d="M56 58 Q60 56 64 58" stroke="#c9a" stroke-width="2" fill="none" stroke-linecap="round"/>
+  
+  <!-- Dobok collar (V-neck) -->
+  <path d="M45 68 L60 78 L75 68 L72 85 L48 85 Z" fill="#fff" stroke="#1a1a1a" stroke-width="1"/>
+  
+  <!-- Black belt visible -->
+  <rect x="48" y="82" width="24" height="5" fill="#1a1a1a" rx="1"/>
+  
+  <!-- Kicking leg hint -->
+  <path d="M75 75 Q90 65 100 55" stroke="#1a1a1a" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <ellipse cx="102" cy="53" rx="6" ry="4" fill="url(#skinTone)" stroke="#1a1a1a" stroke-width="1" transform="rotate(-30 102 53)"/>
+  
+  <!-- Motion lines -->
+  <path d="M85 60 Q95 58 105 60" stroke="#e63946" stroke-width="2" fill="none" opacity="0.7" stroke-linecap="round"/>
+  <path d="M88 68 Q96 66 104 68" stroke="#e63946" stroke-width="1.5" fill="none" opacity="0.5" stroke-linecap="round"/>
+</svg>

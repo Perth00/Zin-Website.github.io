@@ -1,0 +1,211 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="skin" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffe5d5"/>
+      <stop offset="100%" style="stop-color:#ffd5c5"/>
+    </linearGradient>
+    <linearGradient id="hair" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5a3825"/>
+      <stop offset="100%" style="stop-color:#3d2517"/>
+    </linearGradient>
+    <linearGradient id="dobokGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff"/>
+      <stop offset="100%" style="stop-color:#f0f0f0"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Background decorations -->
+  <circle cx="320" cy="60" r="35" fill="#ffd93d" opacity="0.9"/>
+  <circle cx="325" cy="55" r="5" fill="#2d2d2d"/>
+  <circle cx="315" cy="55" r="5" fill="#2d2d2d"/>
+  <path d="M315 68 Q320 73 325 68" stroke="#2d2d2d" stroke-width="2" fill="none"/>
+  <!-- Sun rays -->
+  <g stroke="#ffd93d" stroke-width="3" opacity="0.7">
+    <line x1="320" y1="20" x2="320" y2="10"/>
+    <line x1="350" y1="35" x2="360" y2="25"/>
+    <line x1="355" y1="60" x2="368" y2="60"/>
+    <line x1="350" y1="85" x2="360" y2="95"/>
+    <line x1="290" y1="35" x2="280" y2="25"/>
+    <line x1="285" y1="60" x2="272" y2="60"/>
+    <line x1="290" y1="85" x2="280" y2="95"/>
+  </g>
+  
+  <!-- Mountains background -->
+  <path d="M0 350 L80 280 L160 350" fill="#a8d5ba" opacity="0.5"/>
+  <path d="M120 350 L200 260 L280 350" fill="#90c9a0" opacity="0.5"/>
+  <path d="M240 350 L320 290 L400 350" fill="#a8d5ba" opacity="0.5"/>
+  <!-- Snow caps -->
+  <path d="M190 270 L200 260 L210 270 Q200 275 190 270" fill="#fff" opacity="0.8"/>
+  
+  <!-- Floor/mat -->
+  <rect x="50" y="340" width="300" height="20" fill="#e63946" rx="3"/>
+  <rect x="100" y="340" width="100" height="20" fill="#2563eb"/>
+  <rect x="250" y="340" width="100" height="20" fill="#2563eb"/>
+  
+  <!-- Character group with animation -->
+  <g id="character" filter="url(#shadow)">
+    <!-- Standing leg -->
+    <path d="M175 280 L170 330 L165 340 L185 340 L180 330 L185 280" fill="#1a1a1a"/>
+    <ellipse cx="175" cy="342" rx="12" ry="5" fill="url(#skin)"/>
+    
+    <!-- Dobok pants -->
+    <path d="M155 240 L145 285 L185 285 L175 240 Z" fill="url(#dobokGrad)" stroke="#ddd" stroke-width="1"/>
+    
+    <!-- Kicking leg -->
+    <g id="kickLeg">
+      <path d="M185 245 L260 190 L320 170 L325 180 L265 205 L195 255" fill="#1a1a1a"/>
+      <ellipse cx="322" cy="175" rx="15" ry="8" fill="url(#skin)" transform="rotate(-15 322 175)"/>
+    </g>
+    
+    <!-- Belt -->
+    <rect x="148" y="235" width="44" height="10" fill="#1a1a1a" rx="2"/>
+    <rect x="165" y="235" width="12" height="10" fill="#1a1a1a"/>
+    <!-- Belt tails -->
+    <path d="M160 245 L155 265 L162 260 L165 248" fill="#1a1a1a"/>
+    <path d="M180 245 L185 265 L178 260 L175 248" fill="#1a1a1a"/>
+    
+    <!-- Dobok top -->
+    <path d="M145 180 L195 180 L200 240 L140 240 Z" fill="url(#dobokGrad)" stroke="#ddd" stroke-width="1"/>
+    <!-- V-neck collar -->
+    <path d="M155 180 L170 210 L185 180" fill="none" stroke="#1a1a1a" stroke-width="3"/>
+    <!-- Collar overlap -->
+    <path d="M150 180 L170 205 L170 200 L155 180" fill="#f8f8f8"/>
+    <path d="M190 180 L170 205 L170 200 L185 180" fill="#eee"/>
+    
+    <!-- Arms -->
+    <!-- Guard arm (front) -->
+    <path d="M150 185 L125 220 L130 225 L155 195" fill="url(#dobokGrad)" stroke="#ddd" stroke-width="1"/>
+    <circle cx="127" cy="222" r="12" fill="url(#skin)"/>
+    
+    <!-- Back arm -->
+    <path d="M190 185 L210 200 L205 210 L185 195" fill="url(#dobokGrad)" stroke="#ddd" stroke-width="1"/>
+    <circle cx="208" cy="205" r="10" fill="url(#skin)"/>
+    
+    <!-- Head -->
+    <g id="head">
+      <!-- Hair back -->
+      <ellipse cx="170" cy="135" rx="42" ry="38" fill="url(#hair)"/>
+      
+      <!-- Face -->
+      <ellipse cx="170" cy="145" rx="35" ry="32" fill="url(#skin)"/>
+      
+      <!-- Hair bangs -->
+      <path d="M128 130 Q145 105 170 110 Q195 105 212 130 Q205 138 195 132 Q180 120 170 125 Q160 120 145 132 Q135 138 128 130" fill="url(#hair)"/>
+      
+      <!-- Hair sides -->
+      <ellipse cx="132" cy="150" rx="12" ry="22" fill="url(#hair)"/>
+      <ellipse cx="208" cy="150" rx="12" ry="22" fill="url(#hair)"/>
+      
+      <!-- Eyes -->
+      <ellipse cx="155" cy="148" rx="8" ry="10" fill="#2d2d2d"/>
+      <ellipse cx="185" cy="148" rx="8" ry="10" fill="#2d2d2d"/>
+      <!-- Eye highlights -->
+      <circle cx="158" cy="145" r="3" fill="#fff"/>
+      <circle cx="188" cy="145" r="3" fill="#fff"/>
+      <circle cx="153" cy="150" r="1.5" fill="#fff"/>
+      <circle cx="183" cy="150" r="1.5" fill="#fff"/>
+      
+      <!-- Eyebrows (determined) -->
+      <path d="M145 132 Q155 128 165 134" stroke="#3d2517" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M195 132 Q185 128 175 134" stroke="#3d2517" stroke-width="3" fill="none" stroke-linecap="round"/>
+      
+      <!-- Blush -->
+      <ellipse cx="140" cy="158" rx="8" ry="5" fill="#ffb6c1" opacity="0.6"/>
+      <ellipse cx="200" cy="158" rx="8" ry="5" fill="#ffb6c1" opacity="0.6"/>
+      
+      <!-- Mouth (focused expression) -->
+      <path d="M162 168 Q170 165 178 168" stroke="#c97878" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    </g>
+  </g>
+  
+  <!-- Motion/swoosh lines -->
+  <g id="swoosh" opacity="0">
+    <path d="M250 160 Q290 150 340 165" stroke="#e63946" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M260 180 Q300 175 345 185" stroke="#e63946" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M255 200 Q285 195 330 205" stroke="#e63946" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Impact stars -->
+  <g id="impact" opacity="0">
+    <polygon points="340,170 345,180 355,180 348,188 350,198 340,192 330,198 332,188 325,180 335,180" fill="#ffd93d"/>
+    <polygon points="355,155 358,162 365,162 360,167 362,174 355,170 348,174 350,167 345,162 352,162" fill="#ffd93d" transform="scale(0.7) translate(155 70)"/>
+    <polygon points="360,190 362,195 368,195 364,199 365,205 360,202 355,205 356,199 352,195 358,195" fill="#ffd93d"/>
+  </g>
+  
+  <!-- Sparkles -->
+  <g id="sparkles">
+    <circle cx="80" cy="120" r="4" fill="#ffd93d" opacity="0.8"/>
+    <circle cx="320" cy="280" r="3" fill="#ffd93d" opacity="0.6"/>
+    <circle cx="60" cy="200" r="3" fill="#e63946" opacity="0.5"/>
+    <polygon points="100,300 103,308 111,308 105,313 107,321 100,316 93,321 95,313 89,308 97,308" fill="#ffd93d" opacity="0.6"/>
+  </g>
+  
+  <style>
+    @keyframes kickMotion {
+      0% { transform: rotate(0deg) translateX(0); }
+      20% { transform: rotate(-3deg) translateX(-5px); }
+      50% { transform: rotate(2deg) translateX(3px); }
+      100% { transform: rotate(0deg) translateX(0); }
+    }
+    
+    @keyframes swooshIn {
+      0% { opacity: 0; transform: translateX(-30px); }
+      30% { opacity: 1; }
+      70% { opacity: 1; }
+      100% { opacity: 0; transform: translateX(20px); }
+    }
+    
+    @keyframes impactPop {
+      0% { opacity: 0; transform: scale(0); }
+      50% { opacity: 1; transform: scale(1.2); }
+      70% { opacity: 1; transform: scale(1); }
+      100% { opacity: 0; transform: scale(0.8); }
+    }
+    
+    @keyframes sparkle {
+      0%, 100% { opacity: 0.3; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+    
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    
+    #character {
+      animation: bounce 1.5s ease-in-out infinite;
+      transform-origin: 170px 340px;
+    }
+    
+    #kickLeg {
+      animation: kickMotion 1s ease-in-out infinite;
+      transform-origin: 185px 250px;
+    }
+    
+    #swoosh {
+      animation: swooshIn 1.5s ease-out 0.2s infinite;
+    }
+    
+    #impact {
+      animation: impactPop 1.5s ease-out 0.4s infinite;
+    }
+    
+    #sparkles circle, #sparkles polygon {
+      animation: sparkle 2s ease-in-out infinite;
+    }
+    
+    #sparkles circle:nth-child(2) { animation-delay: 0.3s; }
+    #sparkles circle:nth-child(3) { animation-delay: 0.6s; }
+    #sparkles polygon { animation-delay: 0.9s; }
+    
+    @media (prefers-reduced-motion: reduce) {
+      #character, #kickLeg, #swoosh, #impact, #sparkles * {
+        animation: none;
+      }
+      #swoosh, #impact { opacity: 1; }
+    }
+  </style>
+</svg>
