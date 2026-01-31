@@ -14,65 +14,39 @@ const CONFIG = {
   
   // Contact Information
   whatsappNumber: "+60163091778", // Format: country code + number, no spaces
-  facebookUrl: "https://facebook.com/zzinn18", // REPLACE: Add actual Facebook URL
-  instagramUrl: "https://instagram.com/zzinn18", // REPLACE: Add actual Instagram URL
-  emailAddress: "Zwong650@gmail.com", // REPLACE: Add actual email
-  wechatQrImagePath: "assets/wechat-qr.svg", // REPLACE: Use actual QR image
+  instagramUrl: "https://instagram.com/zzinn18",
+  emailAddress: "zwong650@gmail.com",
+  wechatQrImagePath: "assets/wechat-qr.jpeg",
   
   // Form endpoint - REPLACE with your Formspree endpoint
   formEndpoint: "https://formspree.io/f/xxxxxxx",
   
-  // Video content - REPLACE/ADD your actual videos
-  // Categories: training, competition, tutorials
+  // Video content - Korea Open & SEA Games footage
   videoItems: [
     {
       id: 1,
-      category: "training",
-      title: "Turning Kick Drill",
-      caption: "Speed and power technique breakdown",
-      // REPLACE: Use actual YouTube embed URL or video source
-      embedUrl: "", // e.g., "https://www.youtube.com/embed/VIDEO_ID"
-      videoSrc: "", // e.g., "assets/videos/turning-kick.mp4"
+      category: "competition",
+      videoSrc: "assets/video and pic/WhatsApp Video 2026-02-01 at 00.47.02.mp4",
     },
     {
       id: 2,
       category: "competition",
-      title: "Korea Open 2025",
-      caption: "Gold medal winning performance",
-      embedUrl: "",
-      videoSrc: "",
+      videoSrc: "assets/video and pic/WhatsApp Video 2026-02-01 at 00.46.45.mp4",
     },
     {
       id: 3,
-      category: "tutorials",
-      title: "Poomsae Rhythm",
-      caption: "Mastering timing and flow",
-      embedUrl: "",
-      videoSrc: "",
+      category: "competition",
+      videoSrc: "assets/video and pic/WhatsApp Video 2026-02-01 at 00.46.36.mp4",
     },
     {
       id: 4,
-      category: "training",
-      title: "High Kick Fundamentals",
-      caption: "Flexibility and balance exercises",
-      embedUrl: "",
-      videoSrc: "",
+      category: "competition",
+      videoSrc: "assets/video and pic/WhatsApp Video 2026-02-01 at 00.46.26.mp4",
     },
     {
       id: 5,
       category: "competition",
-      title: "SEA Games 2025",
-      caption: "Team gold medal highlights",
-      embedUrl: "",
-      videoSrc: "",
-    },
-    {
-      id: 6,
-      category: "tutorials",
-      title: "Stance Fundamentals",
-      caption: "Building a strong foundation",
-      embedUrl: "",
-      videoSrc: "",
+      videoSrc: "assets/video and pic/WhatsApp Video 2026-02-01 at 00.46.15.mp4",
     },
   ],
   
@@ -106,7 +80,6 @@ const DOM = {
   // Contact
   whatsappBtn: document.getElementById("whatsappBtn"),
   wechatBtn: document.getElementById("wechatBtn"),
-  facebookBtn: document.getElementById("facebookBtn"),
   emailBtn: document.getElementById("emailBtn"),
   instagramBtn: document.getElementById("instagramBtn"),
   contactForm: document.getElementById("contactForm"),
@@ -117,7 +90,6 @@ const DOM = {
   // Footer
   currentYear: document.getElementById("currentYear"),
   footerWhatsapp: document.getElementById("footerWhatsapp"),
-  footerFacebook: document.getElementById("footerFacebook"),
   footerInstagram: document.getElementById("footerInstagram"),
   
   // WhatsApp CTAs in pricing cards
@@ -296,31 +268,31 @@ const initVideoGallery = () => {
 const renderVideoCards = (videos) => {
   if (!DOM.videosGrid) return;
   
-  DOM.videosGrid.innerHTML = videos.map((video) => {
-    const mediaContent = video.embedUrl
-      ? `<iframe src="${video.embedUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>`
-      : video.videoSrc
-      ? `<video src="${video.videoSrc}" controls preload="metadata"></video>`
-      : `<div class="video-card__placeholder">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-            <polygon points="5 3 19 12 5 21 5 3"/>
-          </svg>
-          <span>Video Coming Soon</span>
-        </div>`;
-    
+  DOM.videosGrid.innerHTML = videos.map((video, index) => {
     return `
-      <article class="video-card animate-on-scroll" data-category="${video.category}">
+      <article class="video-card video-card--portrait animate-on-scroll" data-category="${video.category}" data-video-id="${index}">
         <div class="video-card__media">
-          ${mediaContent}
-        </div>
-        <div class="video-card__content">
-          <span class="video-card__category">${video.category}</span>
-          <h3 class="video-card__title">${video.title}</h3>
-          <p class="video-card__caption">${video.caption}</p>
+          <video src="${video.videoSrc}" controls preload="metadata" playsinline></video>
         </div>
       </article>
     `;
   }).join("");
+  
+  // Detect video orientation after metadata loads
+  DOM.videosGrid.querySelectorAll("video").forEach((video) => {
+    video.addEventListener("loadedmetadata", () => {
+      const card = video.closest(".video-card");
+      if (video.videoWidth > video.videoHeight) {
+        // Landscape video
+        card.classList.remove("video-card--portrait");
+        card.classList.add("video-card--landscape");
+      } else {
+        // Portrait video (default)
+        card.classList.remove("video-card--landscape");
+        card.classList.add("video-card--portrait");
+      }
+    });
+  });
   
   // Re-initialize scroll animations for new elements
   initScrollAnimations();
@@ -351,10 +323,6 @@ const initContactLinks = () => {
   
   if (DOM.whatsappBtn) DOM.whatsappBtn.href = whatsappUrl;
   if (DOM.footerWhatsapp) DOM.footerWhatsapp.href = whatsappUrl;
-  
-  // Facebook
-  if (DOM.facebookBtn) DOM.facebookBtn.href = CONFIG.facebookUrl;
-  if (DOM.footerFacebook) DOM.footerFacebook.href = CONFIG.facebookUrl;
   
   // Instagram
   if (DOM.instagramBtn) DOM.instagramBtn.href = CONFIG.instagramUrl;
@@ -431,23 +399,39 @@ const closeModal = (modal) => {
 const initContactForm = () => {
   if (!DOM.contactForm) return;
   
-  // Update form action
-  DOM.contactForm.action = CONFIG.formEndpoint;
-  
   DOM.contactForm.addEventListener("submit", (e) => {
-    // Basic client-side validation
-    const email = DOM.contactForm.querySelector("#email");
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    e.preventDefault();
     
-    if (email && !emailPattern.test(email.value)) {
-      e.preventDefault();
-      email.setCustomValidity("Please enter a valid email address");
-      email.reportValidity();
+    // Get form values
+    const name = DOM.contactForm.querySelector("#name")?.value || "";
+    const email = DOM.contactForm.querySelector("#email")?.value || "";
+    const phone = DOM.contactForm.querySelector("#phone")?.value || "";
+    const message = DOM.contactForm.querySelector("#message")?.value || "";
+    
+    // Basic email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      const emailInput = DOM.contactForm.querySelector("#email");
+      emailInput.setCustomValidity("Please enter a valid email address");
+      emailInput.reportValidity();
       return;
     }
     
-    // Form will submit to Formspree
-    // You can add loading state here if desired
+    // Construct email body
+    const subject = `Taekwondo Training Inquiry from ${name}`;
+    const body = `Name: ${name}
+Email: ${email}
+Phone: ${phone || "Not provided"}
+
+Message:
+${message}`;
+    
+    // Open mailto link
+    const mailtoUrl = `mailto:${CONFIG.emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoUrl;
+    
+    // Show success feedback
+    alert("Opening your email client to send the message!");
   });
   
   // Clear custom validity on input
@@ -555,6 +539,172 @@ const initGallery = () => {
   if (galleryInstagramBtn) {
     galleryInstagramBtn.href = CONFIG.instagramUrl;
   }
+  
+  // Make gallery images clickable for lightbox
+  const galleryItems = document.querySelectorAll(".gallery__item");
+  galleryItems.forEach((item) => {
+    const img = item.querySelector("img");
+    if (img) {
+      item.addEventListener("click", () => {
+        openLightbox(img.src);
+      });
+    }
+  });
+  
+  // Make about photo clickable
+  const aboutPhoto = document.querySelector(".about__photo img");
+  if (aboutPhoto) {
+    aboutPhoto.style.cursor = "pointer";
+    aboutPhoto.addEventListener("click", () => {
+      openLightbox(aboutPhoto.src);
+    });
+  }
+};
+
+// ===================== LIGHTBOX =====================
+let currentZoom = 100;
+const MIN_ZOOM = 50;
+const MAX_ZOOM = 300;
+const ZOOM_STEP = 25;
+
+const initLightbox = () => {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImage = document.getElementById("lightboxImage");
+  const zoomIn = document.getElementById("zoomIn");
+  const zoomOut = document.getElementById("zoomOut");
+  const zoomReset = document.getElementById("zoomReset");
+  const zoomLevel = document.getElementById("zoomLevel");
+  
+  if (!lightbox) return;
+  
+  // Close lightbox handlers
+  document.querySelectorAll("[data-close-lightbox]").forEach((el) => {
+    el.addEventListener("click", closeLightbox);
+  });
+  
+  // Escape key to close
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && lightbox.classList.contains("open")) {
+      closeLightbox();
+    }
+  });
+  
+  // Zoom controls
+  zoomIn?.addEventListener("click", () => {
+    if (currentZoom < MAX_ZOOM) {
+      currentZoom += ZOOM_STEP;
+      updateZoom();
+    }
+  });
+  
+  zoomOut?.addEventListener("click", () => {
+    if (currentZoom > MIN_ZOOM) {
+      currentZoom -= ZOOM_STEP;
+      updateZoom();
+    }
+  });
+  
+  zoomReset?.addEventListener("click", () => {
+    currentZoom = 100;
+    updateZoom();
+  });
+  
+  // Mouse wheel zoom
+  lightbox.addEventListener("wheel", (e) => {
+    e.preventDefault();
+    if (e.deltaY < 0 && currentZoom < MAX_ZOOM) {
+      currentZoom += ZOOM_STEP;
+    } else if (e.deltaY > 0 && currentZoom > MIN_ZOOM) {
+      currentZoom -= ZOOM_STEP;
+    }
+    updateZoom();
+  }, { passive: false });
+  
+  // Double click to zoom
+  lightboxImage?.addEventListener("dblclick", () => {
+    if (currentZoom === 100) {
+      currentZoom = 200;
+    } else {
+      currentZoom = 100;
+    }
+    updateZoom();
+  });
+  
+  // Pinch to zoom on touch devices
+  let initialDistance = 0;
+  let initialZoom = 100;
+  
+  lightbox.addEventListener("touchstart", (e) => {
+    if (e.touches.length === 2) {
+      initialDistance = Math.hypot(
+        e.touches[0].pageX - e.touches[1].pageX,
+        e.touches[0].pageY - e.touches[1].pageY
+      );
+      initialZoom = currentZoom;
+    }
+  }, { passive: true });
+  
+  lightbox.addEventListener("touchmove", (e) => {
+    if (e.touches.length === 2) {
+      const currentDistance = Math.hypot(
+        e.touches[0].pageX - e.touches[1].pageX,
+        e.touches[0].pageY - e.touches[1].pageY
+      );
+      const scale = currentDistance / initialDistance;
+      currentZoom = Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, initialZoom * scale));
+      updateZoom();
+    }
+  }, { passive: true });
+  
+  function updateZoom() {
+    if (lightboxImage) {
+      lightboxImage.style.transform = `scale(${currentZoom / 100})`;
+    }
+    if (zoomLevel) {
+      zoomLevel.textContent = `${Math.round(currentZoom)}%`;
+    }
+  }
+  
+  // Make WeChat QR clickable for lightbox
+  const wechatQr = document.querySelector(".modal__qr img");
+  if (wechatQr) {
+    wechatQr.addEventListener("click", () => {
+      closeModal(document.getElementById("wechatModal"));
+      setTimeout(() => openLightbox(wechatQr.src), 300);
+    });
+  }
+};
+
+const openLightbox = (imageSrc) => {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImage = document.getElementById("lightboxImage");
+  
+  if (!lightbox || !lightboxImage) return;
+  
+  currentZoom = 100;
+  lightboxImage.src = imageSrc;
+  lightboxImage.style.transform = "scale(1)";
+  document.getElementById("zoomLevel").textContent = "100%";
+  
+  lightbox.hidden = false;
+  document.body.classList.add("no-scroll");
+  
+  // Trigger animation
+  requestAnimationFrame(() => {
+    lightbox.classList.add("open");
+  });
+};
+
+const closeLightbox = () => {
+  const lightbox = document.getElementById("lightbox");
+  if (!lightbox) return;
+  
+  lightbox.classList.remove("open");
+  document.body.classList.remove("no-scroll");
+  
+  setTimeout(() => {
+    lightbox.hidden = true;
+  }, 400);
 };
 
 // ===================== ACCESSIBILITY =====================
@@ -603,6 +753,7 @@ const init = () => {
   initHeroContent();
   initVideoGallery();
   initGallery();
+  initLightbox();
   initContactLinks();
   initModal();
   initContactForm();
