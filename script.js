@@ -185,6 +185,7 @@ const initNavigation = () => {
     DOM.navToggle.classList.toggle("active");
     DOM.navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
     document.body.classList.toggle("no-scroll", isOpen);
+    DOM.header?.classList.toggle("menu-open", isOpen);
   });
   
   // Close menu on link click
@@ -194,6 +195,7 @@ const initNavigation = () => {
       DOM.navToggle?.classList.remove("active");
       DOM.navToggle?.setAttribute("aria-expanded", "false");
       document.body.classList.remove("no-scroll");
+      DOM.header?.classList.remove("menu-open");
     });
   });
   

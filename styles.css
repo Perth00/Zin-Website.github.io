@@ -451,10 +451,8 @@ ol {
   top: 0;
   left: 0;
   right: 0;
-  z-index: var(--z-sticky);
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  z-index: var(--z-overlay);
+  background: #ffffff;
   border-bottom: 1px solid transparent;
   transition: all var(--transition-base);
 }
@@ -462,6 +460,10 @@ ol {
 .header.scrolled {
   border-bottom-color: var(--color-gray-200);
   box-shadow: var(--shadow-sm);
+}
+
+.header.menu-open {
+  background: #ffffff;
 }
 
 .nav {
@@ -535,24 +537,37 @@ ol {
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--color-white);
+  background-color: #ffffff !important;
   padding: var(--space-xl);
+  padding-top: var(--space-2xl);
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-10px);
+  transform: translateY(-20px);
   transition: all var(--transition-base);
-  z-index: var(--z-dropdown);
+  z-index: var(--z-modal);
+  overflow-y: auto;
+}
+
+.nav__menu::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffffff;
+  z-index: -1;
 }
 
 .nav__menu.open {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
-  background: var(--color-white);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 }
 
 .nav__link {
